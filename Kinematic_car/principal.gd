@@ -4,18 +4,21 @@ extends Spatial
 # Declare member variables here. Examples:
 # var a = 2
 # var b = "text"
-onready var label_tiempo = $CanvasLayer/Label
+onready var label_tiempo = $CanvasLayer/LabelTime
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	$Timer.start()
+	$TimerLose.start(20)
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	label_tiempo.set_text(str($Timer.time_left))
+	label_tiempo.set_text(str(int($TimerLose.time_left)))
 
 
-func _on_Timer_timeout():
-	print("you lose!!!!!")
-	get_tree().reload_current_scene()
+
+
+
+
+func _on_TimerLose_timeout():
+		get_tree().reload_current_scene()
