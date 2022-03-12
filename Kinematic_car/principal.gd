@@ -12,7 +12,7 @@ func _ready():
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
+func _process(_delta):
 	label_tiempo.set_text(str(int($TimerLose.time_left)))
 
 
@@ -21,4 +21,4 @@ func _process(delta):
 
 
 func _on_TimerLose_timeout():
-		get_tree().reload_current_scene()
+		print(get_tree().reload_current_scene())
