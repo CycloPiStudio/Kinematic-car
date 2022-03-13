@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=2]
+[gd_scene load_steps=17 format=2]
 
 [ext_resource path="res://coches/coche.gd" type="Script" id=1]
 [ext_resource path="res://modelos_coches/GLTF format/paintRed.material" type="Material" id=2]
@@ -10,6 +10,7 @@
 [ext_resource path="res://modelos_coches/GLTF format/plastic.material" type="Material" id=8]
 [ext_resource path="res://modelos_coches/GLTF format/paintGreen.material" type="Material" id=9]
 [ext_resource path="res://modelos_coches/GLTF format/_defaultMat.material" type="Material" id=10]
+[ext_resource path="res://coches/Pastel.tscn" type="PackedScene" id=11]
 
 [sub_resource type="ArrayMesh" id=1]
 resource_name = "body"
@@ -204,6 +205,7 @@ script = ExtResource( 1 )
 
 [node name="body" type="MeshInstance" parent="tmpParent/coche"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.59888e-14, 0.2, 0.05 )
+visible = false
 mesh = SubResource( 1 )
 material/0 = null
 material/1 = null
@@ -277,3 +279,6 @@ shape = SubResource( 5 )
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.7718, 8.20294 )
 current = true
 far = 285.7
+
+[node name="Pastel" parent="." instance=ExtResource( 11 )]
+transform = Transform( 0.70021, 0, 0, 0, 0.70021, 0, 0, 0, 0.70021, 0, 0.510913, 0 )
