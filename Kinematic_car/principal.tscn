@@ -17,7 +17,7 @@ size = Vector3( 10, 2, 5 )
 extents = Vector3( 5.138, 0.1, 2.734 )
 
 [sub_resource type="BoxShape" id=4]
-extents = Vector3( 0.300285, 0.326764, 0.407562 )
+extents = Vector3( 0.291954, 0.326764, 0.407562 )
 
 [sub_resource type="DynamicFont" id=5]
 size = 350
@@ -51,14 +51,14 @@ shape = SubResource( 3 )
 transform = Transform( 0.359117, 0, -0.933292, 0, 1, 0, 0.933292, 0, 0.359117, -6.86992, -1.96407, 66.2634 )
 
 [node name="meta" type="Spatial" parent="."]
-transform = Transform( 30, 0, 0, 0, 30, 0, 0, 0, 30, 38.8261, 78.7735, -73.6715 )
+transform = Transform( 30, 0, 0, 0, 30, 0, 0, 0, 30, 19.0301, 61.6913, -11.08 )
 script = ExtResource( 3 )
 
 [node name="StaticBody" type="Area" parent="meta"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.907175, 0.888691, 0 )
+transform = Transform( 0.278618, 0, 0, 0, 0.999999, 0, 0, 0, 1.57679, -1.00386, 0.345111, 0.597291 )
 
 [node name="CollisionShape" type="CollisionShape" parent="meta/StaticBody"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.688906, -0.805739, 0 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.30071, -0.29814, 0 )
 shape = SubResource( 4 )
 
 [node name="Timer" type="Timer" parent="meta"]
